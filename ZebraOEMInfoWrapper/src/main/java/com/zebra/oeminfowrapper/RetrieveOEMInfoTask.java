@@ -56,8 +56,9 @@ class RetrieveOEMInfoTask extends ExecutorTask<Object, Void, Boolean> {
                         if(callbackInterface != null)
                         {
                             callbackInterface.onError("Fail to register the app for OEM Service call:" + uri + "\nIt's time to debug this app ;)");
-                            return;
+
                         }
+                        return;
                     }
                     getURIValue(cursor2, uri, callbackInterface);
                     return;
@@ -155,29 +156,25 @@ class RetrieveOEMInfoTask extends ExecutorTask<Object, Void, Boolean> {
 
     private static void getURIValue(Cursor cursor, Uri uri, IResultCallbacks resultCallbacks)
     {
-        while (cursor.moveToNext()) {
-            if (cursor.getColumnCount() == 0)
-            {
-                //  No data in the cursor.  I have seen this happen on non-WAN devices
-                String errorMsg = "Error: " + uri + " does not exist on this device";
-                resultCallbacks.onDebugStatus(errorMsg);
+        cursor.moveToFirst();
+        try
+        {
+            if(cursor.getColumnCount() > 0) {
+                String data = cursor.getString(0);
+                resultCallbacks.onSuccess(data);
             }
-            else{
-                for (int i = 0; i < cursor.getColumnCount(); i++) {
-                    try {
-                        @SuppressLint("Range") String data = cursor.getString(cursor.getColumnIndex(cursor.getColumnName(i)));
-                        resultCallbacks.onSuccess(data);
-                        cursor.close();
-                        return;
-                    }
-                    catch (Exception e)
-                    {
-                        resultCallbacks.onDebugStatus(e.getLocalizedMessage());
-                    }
-                }
+            else
+            {
+                resultCallbacks.onError("Data not found.");
             }
         }
-        cursor.close();
-        resultCallbacks.onError("Data not found in Uri:" + uri);
+        catch(Exception e)
+        {
+            resultCallbacks.onError(e.getMessage());
+        }
+        finally
+        {
+            cursor.close();
+        }
     }
 }
