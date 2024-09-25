@@ -267,9 +267,9 @@ Snippet code to use to retrieve the MX Version installed on the device:
 ```
 
 
-Snippet code to use to retrieve the the OS Patch Version installed on the device:
+Snippet code to use to retrieve the the OS Build Version Security Patch installed on the device:
 ```java
-    private void getMXVersion(Context context)
+    private void getBuildVersionSecurityPatch(Context context)
     {
         Helper_SoftwareInfo.getBuild_Version_Security_Patch(context, new IDIResultCallbacks() {
             @Override
