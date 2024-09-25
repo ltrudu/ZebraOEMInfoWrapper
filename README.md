@@ -110,6 +110,7 @@ Sample AdroidManifest.xml:
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+	<!--> TODO: Add the uses-library EMDK to your manifest </-->
         <uses-library android:name="com.symbol.emdk" />
         <activity android:name=".MainActivity">
             <intent-filter>
