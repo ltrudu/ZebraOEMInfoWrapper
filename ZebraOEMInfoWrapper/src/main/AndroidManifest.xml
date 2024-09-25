@@ -1,0 +1,31 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.zebra.oeminfowrapper">
+  <!-- TODO: BEGIN Add these permissions and queries to your app -->
+  <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+  <uses-permission android:name="com.zebra.provider.READ"/>
+  <uses-permission android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
+      tools:ignore="ProtectedPermissions" />
+  <uses-permission android:name="com.symbol.emdk.permission.EMDK" />
+
+  <queries>
+    <package android:name="com.symbol.emdk.emdkservice" />
+    <package android:name="com.zebra.zebracontentprovider"/>
+    <provider android:authorities="oem_info" />
+  </queries>
+  <!-- TODO: END Add these permissions and queries to your app -->
+
+  <!--application
+      android:name = ".MainApplication"
+      android:allowBackup="true"
+      android:icon="@mipmap/ic_launcher"
+      android:label="@string/app_name"
+      android:roundIcon="@mipmap/ic_launcher_round"
+      android:supportsRtl="true"
+      android:theme="@style/AppTheme">
+  <uses-library android:name="com.symbol.emdk" />
+  TODO: Add <uses-library android:name="com.symbol.emdk" /> to your application element
+  ....
+  </application-->
+
+</manifest>
