@@ -172,7 +172,7 @@ dependencies {
 }
 ```
 
-The information are separated into 4 classes:
+## The information are separated into 4 classes:
 
 - Helper_SecureInfo : Provides access to sensitive information like IMEI, Serial Number, Bluetooth Mac Address, Wifi Mac Address,...
 - Helper_OSUpdateInfo : Provides access to information on the status of the current OS update process
@@ -188,6 +188,7 @@ Feel free to add them and do a pull request on this code if you need them :)
 
 Now you can use the following snippet codes to retrieve OEM information.
 
+## Code Snippets
 
 Snippet code to use to retrieve the Serial Number of the device:
 ```java
