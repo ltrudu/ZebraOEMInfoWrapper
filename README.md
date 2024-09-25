@@ -1,8 +1,8 @@
 *Please be aware that this library / application / sample is provided as a community project without any guarantee of support*
 =========================================================
 
-[![](https://jitpack.io/v/ltrudu/DeviceIdentifiersWrapper.svg)](https://jitpack.io/#ltrudu/DeviceIdentifiersWrapper)
-[![](https://jitpack.io/v/ltrudu/DeviceIdentifiersWrapper/month.svg)](https://jitpack.io/#ltrudu/DeviceIdentifiersWrapper)
+[![](https://jitpack.io/v/ltrudu/ZebraOEMInfoWrapper.svg)](https://jitpack.io/#ltrudu/ZebraOEMInfoWrapper)
+[![](https://jitpack.io/v/ltrudu/ZebraOEMInfoWrapper/month.svg)](https://jitpack.io/#ltrudu/ZebraOEMInfoWrapper)
 
 
 # ZebraOEMInfoWrapper
