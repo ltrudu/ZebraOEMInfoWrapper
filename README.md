@@ -23,6 +23,9 @@ https://techdocs.zebra.com/oeminfo/consume/
 
 ## Change Log !!! 
 
+## 1.1 : getURIValue Error Fix
+Changed method getURIValue from RetrieveOEMInfoTask to be compliant with Zebra's documentation
+
 ## 1.0 : First release
 
 See sample App for a quick implementation of the library.
