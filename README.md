@@ -304,13 +304,13 @@ Sample code if you need to get the serial number and the IMEI number of a device
      private void getDevicesIdentifiers(Context context)
      {
         // We first ask for the SerialNumber
-         DIHelper.getSerialNumber(context, new IDIResultCallbacks() {
+         Helper_SecureInfo.getSerialNumber(context, new IDIResultCallbacks() {
              @Override
              public void onSuccess(String message) {
                  // The message contains the serial number
                  String mySerialNumber = message;
                  // We've got the serial number, now we can ask for the IMEINumber
-                 DIHelper.getIMEINumber(context, new IDIResultCallbacks() {
+                 Helper_SecureInfo.getIMEINumber(context, new IDIResultCallbacks() {
                     @Override
                     public void onSuccess(String message) {
                         // We've got an EMEI number
