@@ -336,7 +336,7 @@ Sample code if you need to get the serial number and the IMEI number of a device
                 // Do something here with the error message
                 // We had an error with the Serial Number, but it
                 // doesn't prevent us from calling the getIMEINumber method
-                DIHelper.getIMEINumber(context, new IDIResultCallbacks() {
+                Helper_SecureInfo.getIMEINumber(context, new IDIResultCallbacks() {
                     @Override
                     public void onSuccess(String message) {
                         // We've got an EMEI number
